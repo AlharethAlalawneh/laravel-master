@@ -226,7 +226,9 @@
 
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
-                    <div class="img" style="background-image: url({{$trip->photo}});"></div>
+        <a href="{{route('tripsdetails',$trip->id)}}">
+
+                    <div class="img" style="background-image: url({{$trip->photo}});"></div></a>
                     <div class="text p-4">
                         <span class="price">{{$trip->price}}</span>
                         <span class="days">{{$trip->days}}</span>

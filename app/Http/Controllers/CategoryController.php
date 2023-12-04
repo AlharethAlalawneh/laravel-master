@@ -30,16 +30,17 @@ class CategoryController extends Controller
         $imgname = $img->getClientOriginalName();
         $img->move(public_path('assetsAdmin/images'), $imgname);
         $cat->category_picture = $imgname;
+        $cat->href = $request->input('cat_name');
         $cat->save();
         return redirect('/AdminCategories');
     }
 
-  
+
     // public function categ()
     // {
     //     $cat = category::all();
 
-       
+
     //     return view('home' , ['cat' => $cat]);
     // }
 

@@ -8,7 +8,7 @@ use App\Models\reservation;
 
 use App\Models\users;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 class TripsController extends Controller
 
 
@@ -16,17 +16,25 @@ class TripsController extends Controller
 
 {
 
-public function petradetails (){
-    
+public function tripsdet (){
 
-    }
+    $data = Trips::with('category:id,category_name')->get();
+    $data2 = Category::all();
 
-    public function index (){
+    Log::info('Data from trips: ' . $data);
+    Log::info('Data from categories: ' . $data2);
 
-        $data = trips::with('category:id,category_name')->get();
-        $data2= category::all();
-        return view('admin.Trips', compact('data','data2'));
-    }
+    return view('admin.Trips', compact('data', 'data2'));
+}
+
+
+
+
+
+public function index() {
+
+}
+
 
 
 
@@ -126,18 +134,22 @@ public function petradetails (){
 
 
 
+    public function deaddetails()
+    {
+        $trips = trips::where('trip_name', 'Dead sea')->get();
 
+        return view('detals')->with('trips', $trips);
 
+    }
 
+    public function showdetails($id){
+        // dd($id);
+        // $trips = trips::find($id)->get();
+        $trips = trips::where('id', $id)->get();
 
-
-    // public function deaddetails()
-    // {
-    //     $trips = trips::where('trip_name', 'Dead sea')->get();
-
-    //     return view('details')->with('trips', $trips);
-
-    // }
+        // dd($trips);
+    return view('detals', compact('trips'));
+    }
 
     // public function aqabadetails()
     // {

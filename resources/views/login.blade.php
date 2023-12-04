@@ -4,12 +4,12 @@
     <title> LOG IN </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="./css/login.style.css"> 
+    <link rel="stylesheet" href="./css/login.style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 </head>
@@ -35,8 +35,8 @@
 <!-- Navbar -->
 
 
-<div class="site-wrap d-md-flex align-items-stretch" style="margin-top: 5rem;">
-    <div class="bg-img" style="background-image: url('myimg/petra\ login.jpg')"></div>
+<div class="site-wrap d-md-flex align-items-stretch">
+    <div class="bg-img" style="background-image: url('myimg/34.jpg')"></div>
     <div class="form-wrap">
         <div class="form-inner">
             <h1 class="title" style="color: #fd7e14;">Login</h1>
@@ -50,7 +50,7 @@
                     @if ($errors->has('email'))
                     <p class="alert alert-danger ">{{ $errors->first('email') }}</p>
                     @endif
-                    
+
                 </div>
 
                 <div class="form-floating">
@@ -60,7 +60,7 @@
                     @if ($errors->has('password'))
                     <p class="alert alert-danger ">{{ $errors->first('password') }}</p>
                     @endif
-                    
+
                 </div>
 
                 <!-- <div class="d-flex justify-content-between">
@@ -70,14 +70,14 @@
                     </div>
                     <div><a href="#">Forgot password?</a></div>
                 </div> -->
-                
+
                 <div class="d-grid mb-5" >
                     <button type="submit" class="btn btn-primary">Log in</button>
                 </div>
 
                 <div class="mb-2">Don’t have an account? <a href="{{route('signup')}}"><span style="color: #fd7e14;">sign up</span></a></div>
 
-             
+
 
             </form>
         </div>

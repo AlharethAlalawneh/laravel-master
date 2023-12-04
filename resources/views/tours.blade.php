@@ -3,13 +3,13 @@
 @section('title' , 'Categories')
 @section('style')
 <style>
-    
+
 </style>
 @endsection
 @section('page')
-    
 
-<br> 
+
+<br>
 
 
 
@@ -29,13 +29,13 @@
 
 <div class="col-md-4 ftco-animate">
     <div class="project-wrap">
-    
-        <a href="{{ $trips->href}}" class="img" style="background-image: url({{ $trips->photo}});"></a>
+
+        <a href="{{route('tripsdetails',$trips->id)}}" class="img" style="background-image: url({{ $trips->photo}});"></a>
         <div class="text p-4">
             <span class="price">{{ $trips->price}} JD/person</span>
             <span class="days">{{ $trips->days}}</span>
             <h3><a href="#">{{ $trips->trip_name}}</a></h3>
-            
+
             <ul>
                 <li><span class="flaticon-shower"></span>2</li>
                 <li><span class="flaticon-king-size"></span>3</li>
@@ -43,9 +43,9 @@
             </ul>
 
         </div>
-        
+
     </div>
-    
+
 </div>
 
 
@@ -59,6 +59,6 @@
 
 
 
-  
+
 @endsection
-    
+

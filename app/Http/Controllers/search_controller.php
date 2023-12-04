@@ -7,17 +7,21 @@ use Illuminate\Http\Request;
 
 class search_controller extends Controller
 {
-  
+
     public function destroy(){
         if(session()->has('search')){
             session()->pull('search');
         }
-        return view('home');
+        else{
+            $trips = trips::all();
+        }
+
+        return view('home' , ['trips' => $trips]);
     }
-    
+
     public function search(Request $request){
         $search = $request->input('search');
-        
+
         if($search){
             $request->session()->put('search' , $search);
             return redirect()->route('book');
@@ -36,8 +40,8 @@ class search_controller extends Controller
                 $trips = trips::all();
             }
             return view('book' , ['trips' => $trips]);
-            
-    
+
+
 }
 
 }

@@ -4,12 +4,12 @@
     <title> REGISTER </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,12 +31,12 @@
 </head>
 <body>
 
-    
+
 <!-- Navbar -->
 
 
-<div class="site-wrap d-md-flex align-items-stretch" style="margin-top: 5rem;" >
-    <div class="bg-img" style="background-image: url('myimg/wadiram1.regester.jpg')"></div>
+<div class="site-wrap d-md-flex align-items-stretch">
+    <div class="bg-img" style="background-image: url('myimg/33.jpg')"></div>
     <div class="form-wrap">
         <div class="form-inner">
             <h1 class="title" style="color: #fd7e14;">Sign up</h1>
@@ -65,7 +65,7 @@
                     @if ($errors->has('email'))
                     <p class="alert alert-danger ">{{ $errors->first('email') }}</p>
                     @endif
-                    
+
                 </div>
                 <div class="form-floating">
                     <label for="email">Phone Number</label>
@@ -73,7 +73,7 @@
                     @if ($errors->has('phone'))
                     <p class="alert alert-danger ">{{ $errors->first('phone') }}</p>
                     @endif
-                    
+
                 </div>
 
                 <div class="form-floating">
@@ -107,7 +107,7 @@
 
                 <div class="mb-2">Already a member? <a href="{{route('login')}}"><span style="color: #fd7e14;"> Log in </span> </a></div>
 
-              
+
 
             </form>
         </div>

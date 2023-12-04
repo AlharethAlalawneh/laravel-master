@@ -123,8 +123,12 @@ Route::get('/enjoyment',[TripsController::class, 'enjoyment']);
 Route::get('/medical',[TripsController::class, 'medical']);
 Route::get('/archaeological',[TripsController::class, 'archaeological']);
 Route::get('/religious',[TripsController::class, 'religious']);
-Route::get('/petradetails',[TripsController::class, 'petradetails']);
+Route::get('/AdminTrips',[TripsController::class, 'tripsdet']);
 Route::get('/deaddetails',[TripsController::class, 'deaddetails']);
+
+Route::get('/tripsdetails/{id}',[TripsController::class, 'showdetails'])->name('tripsdetails');
+
+
 Route::get('/ammandetails',[TripsController::class, 'ammandetails']);
 Route::get('/aqabadetails',[TripsController::class, 'aqabadetails']);
 Route::get('/wadidetails',[TripsController::class, 'wadidetails']);

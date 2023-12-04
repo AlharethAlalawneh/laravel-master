@@ -99,7 +99,7 @@ class ReservatioController extends Controller
         $totalPrice=0;
         foreach ($reservations as $reservation) {
             $tripPrice = $reservation->trip->price;
-            $totalPrice  = $totalPrice + $tripPrice ; 
+            $totalPrice  = $totalPrice + $tripPrice ;
         }
         $data = $totalPrice;
         $data2 = reservation::count();
@@ -122,6 +122,7 @@ class ReservatioController extends Controller
         $confirmation->user_id = $user_id;
         $confirmation->trip_id = $trip_id;
         $confirmation->trips_days = $day;
+        $confirmation->reservation_date = $day;
         $confirmation->save();
         return redirect()->route('user_profile');
     }
@@ -131,10 +132,10 @@ class ReservatioController extends Controller
         // return view('user', ['user' => $user]);
         $userId = session('id');
         $tripId = session('trip_id');
-        
+
         $reservations = reservation::where('user_id', '=', $userId)->with('user', 'trip')->get();
 
         return view('user', compact('reservations' , 'user'));
     }
-    
+
 }
